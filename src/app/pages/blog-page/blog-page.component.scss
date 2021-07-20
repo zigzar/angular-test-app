@@ -1,0 +1,9 @@
+.container {
+    width: clamp(320px, 75%, 1200px);
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin: 3em 0;
+}

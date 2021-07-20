@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+
+.list {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
