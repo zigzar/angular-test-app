@@ -7,6 +7,7 @@ import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { PostListItemComponent } from './components/post-list-item/post-list-item.component';
 import { MyButtonComponent } from './components/UI/my-button/my-button.component';
+import { CreatePageComponent } from './pages/create-page/create-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MyButtonComponent } from './components/UI/my-button/my-button.component
     BlogPageComponent,
     PostListComponent,
     PostListItemComponent,
-    MyButtonComponent
+    MyButtonComponent,
+    CreatePageComponent
   ],
   imports: [
     BrowserModule,
