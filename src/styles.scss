@@ -10,3 +10,8 @@ body {
     background-color: #eee;
     padding-top: 3em;
 }
+
+.container {
+    width: clamp(320px, 75%, 1200px);
+    margin: 0 auto;
+}

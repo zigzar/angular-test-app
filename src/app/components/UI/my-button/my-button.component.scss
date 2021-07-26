@@ -5,4 +5,18 @@
 .btn {
   width: 100%;
   padding: 0.5em 1em;
+  border: 1px solid #333;
+  background-color: rgb(210, 232, 252);
+}
+
+.btn:hover {
+  background-color: rgb(169, 214, 255);
+}
+
+.btn_remove {
+  background-color: rgb(255, 167, 182);
+}
+
+.btn_remove:hover {
+  background-color: rgb(238, 88, 113);
 }

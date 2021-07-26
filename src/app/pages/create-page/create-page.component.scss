@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.form__header {
+    display: block;
+}
+
+.form__title {
+    display: block;
+    padding: 1em;
+}
+
+.form__content {
+    display: block;
+    padding: 1em;
+    min-height: 400px;
+    overflow-y: scroll;
+}
+
+.form__btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 8em;
+}
+
