@@ -1,5 +1,7 @@
 <div class="container">
-    <app-my-button class="btn" [text]="'Назад'"></app-my-button>
+    <a routerLink="/">
+        <app-my-button class="btn" [text]="'Назад'"></app-my-button>
+    </a>
     <form action="" class="form">
         <h2 class="form__header">Запись "{{post.title}}"</h2>
         <input name="title" type="text" class="form__title" placeholder="Title записи" [(ngModel)]="post.title">
