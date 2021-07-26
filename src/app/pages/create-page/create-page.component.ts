@@ -1,3 +1,4 @@
+import { Post } from './../../app.component';
 import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -7,12 +8,10 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class CreatePageComponent implements OnInit {
 
-  post = {
-    title:'',
-    content:'',
-  };
-
-
+  post:Post = {
+    title: '',
+    content: '',
+  }
 
   constructor() { 
 
