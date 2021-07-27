@@ -41,9 +41,10 @@ export class CreatePageComponent implements OnInit {
   }
 
   removePost(post: Post) {
-    console.log(`Removing post with id ${post.id}`);
-    this.postService.removePost(post.id);
-    this.router.navigate(['']);
+    if (confirm("Удалить?")) {
+      this.postService.removePost(post.id);
+      this.router.navigate(['']);
+    }
   }
 
 }
