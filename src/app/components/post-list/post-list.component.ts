@@ -1,4 +1,3 @@
-import { PostService } from './../../post.service';
 import { Post } from './../../app.component';
 import { Component, OnInit } from '@angular/core';
 
@@ -6,17 +5,18 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.scss'],
-  providers: [PostService]
 })
 export class PostListComponent implements OnInit {
 
   
   posts: Post[] = [];
+  constructor() {
 
-  constructor(private postService: PostService) { }
+  }
 
   ngOnInit(): void {
-    this.posts = this.postService.getPost();
+    let storagePosts = localStorage.getItem('posts');
+    if (storagePosts) this.posts = JSON.parse(storagePosts);
   }
 
 }

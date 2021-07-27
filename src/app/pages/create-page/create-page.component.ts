@@ -1,6 +1,6 @@
 import { PostService } from './../../post.service';
 import { Post } from './../../app.component';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-create-page',
