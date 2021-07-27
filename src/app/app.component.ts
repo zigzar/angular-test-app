@@ -10,6 +10,7 @@ export class AppComponent {
 }
 
 export interface Post {
+  id: number,
   title: string,
   content: string,
 };

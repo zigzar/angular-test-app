@@ -9,6 +9,7 @@ import { Component, OnInit, Input} from '@angular/core';
 export class PostListItemComponent implements OnInit {
 
   @Input() post: Post = {
+    id: 0,
     title: '',
     content: ''
   }

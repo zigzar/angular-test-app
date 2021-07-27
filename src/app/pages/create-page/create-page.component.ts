@@ -8,9 +8,10 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class CreatePageComponent implements OnInit {
 
-  post:Post = {
+  post: Post = {
+    id: 0,
     title: '',
-    content: '',
+    content: ''
   }
 
   constructor() { 
