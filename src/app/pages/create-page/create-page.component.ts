@@ -22,12 +22,7 @@ export class CreatePageComponent implements OnInit {
   constructor(private postService: PostService, private activateRoute: ActivatedRoute, private router: Router) { 
     this.id = activateRoute.snapshot.params['id'];
     if (this.id) { // Если в параметрах запроса указан id
-      let storagePosts = localStorage.getItem('posts');
-      let posts: Post[] = [];
-      if (storagePosts) { // Если Local Storage не пустой
-        posts = JSON.parse(storagePosts);
-      }
-      let post = posts.find(item => item.id == this.id)
+      let post = this.postService.getPost(this.id);
       post ? this.post = post : this.router.navigate(['']); // Если пост с таким id не существует, то выполнить редирект на главную страницу
     } 
   }
