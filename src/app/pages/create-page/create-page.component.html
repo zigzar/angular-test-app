@@ -8,7 +8,7 @@
         <textarea name="content" class="form__content" placeholder="Контент записи" [(ngModel)]="post.content"></textarea>
         <div class="form__btns">
             <app-my-button class="btn" [btnType]="'btn_remove'" [text]="'Удалить'"></app-my-button>
-            <app-my-button class="btn" (click)="addPost(post)" [btnType]="'btn_save'" [text]="'Сохранить'"></app-my-button>
+            <app-my-button class="btn" (click)="id ? updatePost(post) : addPost(post)" [btnType]="'btn_save'" [text]="'Сохранить'"></app-my-button>
         </div>
     </form>
 </div>

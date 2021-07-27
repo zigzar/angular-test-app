@@ -6,7 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {path: '', component: BlogPageComponent},
-  {path: 'create', component: CreatePageComponent}
+  {path: 'create', component: CreatePageComponent},
+  {path: 'post/:id', component: CreatePageComponent}
 ];
 
 @NgModule({

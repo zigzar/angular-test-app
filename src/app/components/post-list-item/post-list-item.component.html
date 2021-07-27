@@ -3,5 +3,7 @@
     <div class="item__content">
         <p>{{post.content}}</p>
     </div>
-    <app-my-button class="item__btn" [text]="'Перейти'"></app-my-button>
+    <a [routerLink]="['post', post.id]">
+        <app-my-button class="item__btn" [text]="'Перейти'"></app-my-button>
+    </a>
 </div>

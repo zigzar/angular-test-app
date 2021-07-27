@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { PostService } from './../../post.service';
 import { Post } from './../../app.component';
 import { Component, OnInit } from '@angular/core';
@@ -16,8 +17,19 @@ export class CreatePageComponent implements OnInit {
     content: ''
   }
 
-  constructor(private postService: PostService) { 
+  id: number;
 
+  constructor(private postService: PostService, private activateRoute: ActivatedRoute, private router: Router) { 
+    this.id = activateRoute.snapshot.params['id'];
+    if (this.id) { // Если в параметрах запроса указан id
+      let storagePosts = localStorage.getItem('posts');
+      let posts: Post[] = [];
+      if (storagePosts) { // Если Local Storage не пустой
+        posts = JSON.parse(storagePosts);
+      }
+      let post = posts.find(item => item.id == this.id)
+      post ? this.post = post : this.router.navigate(['']); // Если пост с таким id не существует, то выполнить редирект на главную страницу
+    } 
   }
 
   ngOnInit(): void {
@@ -26,6 +38,10 @@ export class CreatePageComponent implements OnInit {
   addPost(post: Post) {
     post.id = Date.now();
     this.postService.addPost(post);
+  }
+
+  updatePost(post: Post) {
+
   }
 
 }
