@@ -33,10 +33,17 @@ export class CreatePageComponent implements OnInit {
   addPost(post: Post) {
     post.id = Date.now();
     this.postService.addPost(post);
+    this.router.navigate(['']);
   }
 
   updatePost(post: Post) {
-    this.postService.updatePost(post)
+    this.postService.updatePost(post);
+  }
+
+  removePost(post: Post) {
+    console.log(`Removing post with id ${post.id}`);
+    this.postService.removePost(post.id);
+    this.router.navigate(['']);
   }
 
 }

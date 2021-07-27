@@ -23,6 +23,12 @@ export class PostService{
         localStorage.setItem('posts', JSON.stringify(this.posts))
     }
 
+    removePost(id: number) {
+        this.fetchPosts();
+        this.posts = this.posts.filter(item => item.id != id);
+        localStorage.setItem('posts', JSON.stringify(this.posts))
+    }
+
     getPost(id: number) {
         this.fetchPosts();
         return this.posts.find(item => item.id == id)
