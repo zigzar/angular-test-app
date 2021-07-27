@@ -1,8 +1,6 @@
 <div class="item">
     <h2 class="item__header">{{post.title}}</h2>
-    <div class="item__content">
-        <p>{{post.content}}</p>
-    </div>
+    <p class="item__content">{{post.content}}</p>
     <a [routerLink]="['post', post.id]">
         <app-my-button class="item__btn" [text]="'Перейти'"></app-my-button>
     </a>
