@@ -36,7 +36,7 @@ export class CreatePageComponent implements OnInit {
   }
 
   updatePost(post: Post) {
-
+    this.postService.updatePost(post)
   }
 
 }

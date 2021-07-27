@@ -16,6 +16,13 @@ export class PostService{
         localStorage.setItem('posts', JSON.stringify(this.posts))
     }
 
+    updatePost(post: Post) {
+        this.fetchPosts();
+        let index = this.posts.findIndex(item => item.id == post.id)
+        if (index != -1) this.posts[index] = post;
+        localStorage.setItem('posts', JSON.stringify(this.posts))
+    }
+
     getPost(id: number) {
         this.fetchPosts();
         return this.posts.find(item => item.id == id)
